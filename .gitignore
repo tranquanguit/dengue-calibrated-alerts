@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+*.log
+logs/
+models/
+# large / re-downloadable raw inputs (rebuilt by pipeline/fetch_data.py)
+data/raw/gsod/
+data/raw/sources/
+data/raw/isd-history.csv
+data/raw/geo/ne_admin1.dbf
+# per-target checkpoints (merged files are committed)
+**/_parts/
+**/_parts_*/
+# large intermediate (rebuilt by scripts/conformal_intervals.py)
+results/conformal_predictions.parquet
+manuscript/ieee_isci2027/*.aux
+manuscript/ieee_isci2027/*.out
+manuscript/ieee_isci2027/*.blg

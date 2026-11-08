@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper and the original data sources listed in data/README.md."
+title: "Guaranteed versus Experienced False-Alert Rates: A Pre-registered Evaluation of Conformal Selection for Provincial Dengue Outbreak Bulletins"
+type: software
+authors:
+  - family-names: "Tran"
+    given-names: "Van-Quang"
+    affiliation: "University of Information Technology, Vietnam National University Ho Chi Minh City"
+repository-code: "https://github.com/tranquanguit/dengue-calibrated-alerts"
+license: MIT

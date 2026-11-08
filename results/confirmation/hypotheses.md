@@ -1,0 +1,47 @@
+# Confirmatory decisions (prereg v3 + v3.1)
+
+- **H1**: holds
+- **H2**: True
+- **H2 material (A2)**: True
+- **H2b**: True
+- **H4 dominated (>=2/3 h)**: True
+- **onset recommendation met**: False
+- **H3 (upper CI<0 at >=2 h)**: False
+- **H5 (cs@0.2 coverage>=0.85)**: False
+- **claim-table row**: 1
+
+| hypothesis                          |   h | value                                                                                        | verdict       |
+|:------------------------------------|----:|:---------------------------------------------------------------------------------------------|:--------------|
+| H1 bulletin FDR CS@0.2              |   1 | 0.126 [0.095, 0.158]                                                                         |               |
+| H1 bulletin FDR CS@0.2              |   2 | 0.124 [0.090, 0.161]                                                                         |               |
+| H1 bulletin FDR CS@0.2              |   3 | 0.119 [0.082, 0.161]                                                                         |               |
+| H2 gap pooled-bulletin CS@0.2       |   1 | 0.100 [0.062, 0.155]                                                                         |               |
+| H2 gap' FDR|R>0-bulletin CS@0.2     |   1 | 0.068 [0.040, 0.106]                                                                         |               |
+| H2 gap pooled-bulletin CS@0.2       |   2 | 0.153 [0.095, 0.239]                                                                         |               |
+| H2 gap' FDR|R>0-bulletin CS@0.2     |   2 | 0.117 [0.080, 0.165]                                                                         |               |
+| H2 gap pooled-bulletin CS@0.2       |   3 | 0.212 [0.140, 0.316]                                                                         |               |
+| H2 gap' FDR|R>0-bulletin CS@0.2     |   3 | 0.155 [0.106, 0.214]                                                                         |               |
+| H2b gap(CS@0.2)-gap(point-margin>0) |   1 | 0.093 [0.066, 0.129]                                                                         |               |
+| H2b gap(CS@0.2)-gap(point-margin>0) |   2 | 0.131 [0.096, 0.170]                                                                         |               |
+| H2b gap(CS@0.2)-gap(point-margin>0) |   3 | 0.165 [0.120, 0.220]                                                                         |               |
+| H4 CS@0.2 dominated by              |   1 | point-margin>0.0: dFDRpool 0.057 [0.022, 0.093], dRecall -0.038 [-0.111, 0.015] (CS - point) | dominated     |
+| H4 onset criterion                  |   1 | CS 0.340 vs point-z>-0.1 0.465 (pooled FDR 0.225 vs 0.211)                                   | CS not higher |
+| H4 CS@0.2 dominated by              |   2 | point-margin>0.1: dFDRpool 0.070 [0.031, 0.107], dRecall -0.018 [-0.096, 0.045] (CS - point) | dominated     |
+| H4 onset criterion                  |   2 | CS 0.234 vs point-z>-0.1 0.401 (pooled FDR 0.277 vs 0.285)                                   | CS not higher |
+| H4 CS@0.2 dominated by              |   3 | point-margin>0.1: dFDRpool 0.079 [0.030, 0.127], dRecall -0.015 [-0.084, 0.043] (CS - point) | dominated     |
+| H4 onset criterion                  |   3 | CS 0.189 vs point-z>-0.1 0.346 (pooled FDR 0.332 vs 0.334)                                   | CS not higher |
+| H3 Mondrian-CS pooled FDR @0.2      |   1 | -0.008 [-0.025, 0.010]                                                                       |               |
+| H3 Mondrian-CS pooled FDR @0.2      |   2 | -0.006 [-0.037, 0.022]                                                                       |               |
+| H3 Mondrian-CS pooled FDR @0.2      |   3 | -0.002 [-0.021, 0.019]                                                                       |               |
+| H5 coverage cs-mondrian@0.2         |   1 | 0.727 (n=22)                                                                                 |               |
+| H5 coverage cs-mondrian@0.2         |   2 | 0.714 (n=21)                                                                                 |               |
+| H5 coverage cs-mondrian@0.2         |   3 | 0.667 (n=18)                                                                                 |               |
+| H5 coverage cs@0.2                  |   1 | 0.682 (n=22)                                                                                 |               |
+| H5 coverage cs@0.2                  |   2 | 0.684 (n=19)                                                                                 |               |
+| H5 coverage cs@0.2                  |   3 | 0.688 (n=16)                                                                                 |               |
+| H5 coverage cs@0.3                  |   1 | 0.727 (n=22)                                                                                 |               |
+| H5 coverage cs@0.3                  |   2 | 0.700 (n=20)                                                                                 |               |
+| H5 coverage cs@0.3                  |   3 | 0.722 (n=18)                                                                                 |               |
+| H5 coverage point-margin>0.0        |   1 | 0.808 (n=26)                                                                                 |               |
+| H5 coverage point-margin>0.0        |   2 | 0.692 (n=26)                                                                                 |               |
+| H5 coverage point-margin>0.0        |   3 | 0.680 (n=25)                                                                                 |               |

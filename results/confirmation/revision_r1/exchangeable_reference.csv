@@ -1,0 +1,6 @@
+,rep,rep,delta,delta,delta_empty,delta_empty,cov_part,cov_part,corr_R_FDP,corr_R_FDP,fdr_bulletin,fdr_bulletin,fdr_given_alert,fdr_given_alert,fdr_pooled,fdr_pooled,recall,recall,onset_recall,onset_recall,share_bulletins_alerting,share_bulletins_alerting,gap_pooled,gap_pooled,gap_pos,gap_pos
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+h,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,9.5,5.9161,0.037,0.0053,0.0345,0.0032,0.0025,0.0067,0.013,0.0349,0.1597,0.0061,0.1942,0.0076,0.1967,0.0031,0.6875,0.0049,0.3738,0.0092,0.8225,0.0133,0.037,0.0053,0.0345,0.0032
+2,9.5,5.9161,0.0837,0.0062,0.0743,0.0045,0.0094,0.0084,0.0431,0.0391,0.1463,0.0053,0.2207,0.0079,0.23,0.0046,0.484,0.0057,0.2602,0.0073,0.6632,0.0136,0.0837,0.0062,0.0743,0.0045
+3,9.5,5.9161,0.1023,0.0078,0.1086,0.0067,-0.0063,0.0106,-0.0242,0.0415,0.1578,0.0064,0.2664,0.0106,0.2601,0.006,0.3555,0.0049,0.2063,0.0083,0.5924,0.015,0.1023,0.0078,0.1086,0.0067

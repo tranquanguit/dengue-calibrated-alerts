@@ -1,0 +1,26 @@
+# v2 benchmark: STARS vs selection baselines, NASA POWER climate, 9 countries.
+common:
+  horizons: [1, 2, 3, 4, 5, 6]
+  ar_lags: 12
+  exo_lags: [0, 1, 2, 3, 4, 5, 6]
+  top_k: 10
+  random_state: 42
+  stars: {n_boot: 20, top_q: 20, pi: 0.5}
+  lgbm: {n_estimators: 300, learning_rate: 0.05, num_leaves: 31, min_child_samples: 20,
+         subsample: 0.8, subsample_freq: 1, colsample_bytree: 0.8, reg_lambda: 1.0,
+         max_bin: 63, force_col_wise: true}
+
+datasets:
+  thailand:    {targets: [dengue], cross_vars: [], test_years: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]}
+  indonesia:   {targets: [dengue], cross_vars: [], test_years: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]}
+  cambodia:    {targets: [dengue], cross_vars: [], test_years: [2006, 2007, 2008, 2009, 2010]}
+  laos:        {targets: [dengue], cross_vars: [], test_years: [2006, 2007, 2008, 2009, 2010]}
+  malaysia:    {targets: [dengue], cross_vars: [], test_years: [2006, 2007, 2008, 2009, 2010]}
+  philippines: {targets: [dengue], cross_vars: [], test_years: [2006, 2007, 2008, 2009, 2010]}
+  vietnam:     {targets: [dengue], cross_vars: [], test_years: [2006, 2007, 2008, 2009, 2010]}
+  srilanka:    {targets: [dengue], cross_vars: [], test_years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]}
+  brazil:      {targets: [dengue], cross_vars: [], test_years: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]}
+  japan:
+    targets: [ehec, legionellosis, scrub_typhus, japanese_spotted_fever]
+    cross_vars: [ehec, legionellosis, scrub_typhus, japanese_spotted_fever, amebiasis, hepatitis_a, hepatitis_e, shigellosis]
+    test_years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
