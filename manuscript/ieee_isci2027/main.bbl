@@ -21,10 +21,23 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{bortman1999}
-M.~Bortman, ``Elaboraci{\'o}n de corredores o canales end{\'e}micos mediante
-  planillas de c{\'a}lculo,'' \emph{Revista Panamericana de Salud P{\'u}blica},
-  vol.~5, no.~1, pp. 1--8, 1999.
+\bibitem{ansari2025chronos2}
+A.~F. Ansari \emph{et~al.}, ``Chronos-2: from univariate to universal
+  forecasting,'' \emph{arXiv preprint}, 2025.
+
+\bibitem{clarke2024opendengue}
+J.~Clarke \emph{et~al.}, ``A global dataset of publicly available dengue case
+  count data,'' \emph{Scientific Data}, vol.~11, p. 296, 2024.
+
+\bibitem{jin2023selection}
+Y.~Jin and E.~J. Cand{\`e}s, ``Selection by prediction with conformal
+  p-values,'' \emph{Journal of Machine Learning Research}, vol.~24, no. 244,
+  pp. 1--41, 2023.
+
+\bibitem{bates2023}
+S.~Bates, E.~Cand{\`e}s, L.~Lei, Y.~Romano, and M.~Sesia, ``Testing for
+  outliers with conformal p-values,'' \emph{The Annals of Statistics}, vol.~51,
+  no.~1, pp. 149--178, 2023.
 
 \bibitem{hussain2018ewars}
 L.~Hussain-Alkhateeb \emph{et~al.}, ``Early warning and response system
@@ -32,84 +45,57 @@ L.~Hussain-Alkhateeb \emph{et~al.}, ``Early warning and response system
   applications in critical settings,'' \emph{PLoS ONE}, vol.~13, no.~5, p.
   e0196811, 2018.
 
+\bibitem{ke2017lightgbm}
+G.~Ke, Q.~Meng, T.~Finley, T.~Wang, W.~Chen, W.~Ma, Q.~Ye, and T.-Y. Liu,
+  ``{LightGBM}: a highly efficient gradient boosting decision tree,'' in
+  \emph{Advances in Neural Information Processing Systems (NeurIPS)}, vol.~30,
+  2017.
+
 \bibitem{lowe2016}
 R.~Lowe \emph{et~al.}, ``Evaluating probabilistic dengue risk forecasts from a
   prototype early warning system for {B}razil,'' \emph{eLife}, vol.~5, p.
   e11285, 2016.
-
-\bibitem{jin2023selection}
-Y.~Jin and E.~J. Cand{\`e}s, ``Selection by prediction with conformal
-  p-values,'' \emph{Journal of Machine Learning Research}, vol.~24, no. 244,
-  pp. 1--41, 2023.
-
-\bibitem{genovese2002}
-C.~Genovese and L.~Wasserman, ``Operating characteristics and extensions of the
-  false discovery rate procedure,'' \emph{Journal of the Royal Statistical
-  Society: Series B}, vol.~64, no.~3, pp. 499--517, 2002.
 
 \bibitem{sun2007}
 W.~Sun and T.~T. Cai, ``Oracle and adaptive compound decision rules for false
   discovery rate control,'' \emph{Journal of the American Statistical
   Association}, vol. 102, no. 479, pp. 901--912, 2007.
 
+\bibitem{genovese2002}
+C.~Genovese and L.~Wasserman, ``Operating characteristics and extensions of the
+  false discovery rate procedure,'' \emph{Journal of the Royal Statistical
+  Society: Series B}, vol.~64, no.~3, pp. 499--517, 2002.
+
+\bibitem{bortman1999}
+M.~Bortman, ``Elaboraci{\'o}n de corredores o canales end{\'e}micos mediante
+  planillas de c{\'a}lculo,'' \emph{Revista Panamericana de Salud P{\'u}blica},
+  vol.~5, no.~1, pp. 1--8, 1999.
+
 \bibitem{benjamini1995}
 Y.~Benjamini and Y.~Hochberg, ``Controlling the false discovery rate: a
   practical and powerful approach to multiple testing,'' \emph{Journal of the
   Royal Statistical Society: Series B}, vol.~57, no.~1, pp. 289--300, 1995.
 
-\bibitem{benjamini2001}
-Y.~Benjamini and D.~Yekutieli, ``The control of the false discovery rate in
-  multiple testing under dependency,'' \emph{The Annals of Statistics},
-  vol.~29, no.~4, pp. 1165--1188, 2001.
+\bibitem{angelopoulos2021ltt}
+A.~N. Angelopoulos, S.~Bates, E.~J. Cand{\`e}s, M.~I. Jordan, and L.~Lei,
+  ``Learn then test: Calibrating predictive algorithms to achieve risk
+  control,'' \emph{The Annals of Applied Statistics}, vol.~19, no.~2, pp.
+  1641--1662, 2025.
 
-\bibitem{storey2003}
-J.~D. Storey, ``The positive false discovery rate: a {B}ayesian interpretation
-  and the q-value,'' \emph{The Annals of Statistics}, vol.~31, no.~6, pp.
-  2013--2035, 2003.
-
-\bibitem{vovk2005}
-V.~Vovk, A.~Gammerman, and G.~Shafer, \emph{Algorithmic Learning in a Random
-  World}.\hskip 1em plus 0.5em minus 0.4em\relax New York: Springer, 2005.
-
-\bibitem{bates2023}
-S.~Bates, E.~Cand{\`e}s, L.~Lei, Y.~Romano, and M.~Sesia, ``Testing for
-  outliers with conformal p-values,'' \emph{The Annals of Statistics}, vol.~51,
-  no.~1, pp. 149--178, 2023.
-
-\bibitem{barber2023}
-R.~F. Barber, E.~J. Cand{\`e}s, A.~Ramdas, and R.~J. Tibshirani, ``Conformal
-  prediction beyond exchangeability,'' \emph{The Annals of Statistics},
-  vol.~51, no.~2, pp. 816--845, 2023.
-
-\bibitem{gibbs2021}
-I.~Gibbs and E.~Cand{\`e}s, ``Adaptive conformal inference under distribution
-  shift,'' in \emph{Advances in Neural Information Processing Systems
-  (NeurIPS)}, 2021.
+\bibitem{waudbysmith2024}
+I.~Waudby-Smith and A.~Ramdas, ``Estimating means of bounded random variables
+  by betting,'' \emph{Journal of the Royal Statistical Society: Series B},
+  vol.~86, no.~1, pp. 1--27, 2024.
 
 \bibitem{angelopoulos2024crc}
 A.~N. Angelopoulos, S.~Bates, A.~Fisch, L.~Lei, and T.~Schuster, ``Conformal
   risk control,'' in \emph{Proceedings of the International Conference on
   Learning Representations (ICLR)}, 2024.
 
-\bibitem{angelopoulos2021ltt}
-A.~N. Angelopoulos, S.~Bates, E.~J. Cand{\`e}s, M.~I. Jordan, and L.~Lei,
-  ``Learn then test: calibrating predictive algorithms to achieve risk
-  control,'' \emph{arXiv preprint arXiv:2110.01052}, 2021.
-
-\bibitem{javanmard2018}
-A.~Javanmard and A.~Montanari, ``Online rules for control of false discovery
-  rate and false discovery exceedance,'' \emph{The Annals of Statistics},
-  vol.~46, no.~2, pp. 526--554, 2018.
-
-\bibitem{zrnic2020}
-T.~Zrnic, D.~Jiang, A.~Ramdas, and M.~Jordan, ``The power of batching in
-  multiple hypothesis testing,'' in \emph{Proceedings of the International
-  Conference on Artificial Intelligence and Statistics (AISTATS)}, 2020.
-
-\bibitem{johansson2019}
-M.~A. Johansson \emph{et~al.}, ``An open challenge to advance probabilistic
-  forecasting for dengue epidemics,'' \emph{Proceedings of the National Academy
-  of Sciences}, vol. 116, no.~48, pp. 24\,268--24\,274, 2019.
+\bibitem{barber2023}
+R.~F. Barber, E.~J. Cand{\`e}s, A.~Ramdas, and R.~J. Tibshirani, ``Conformal
+  prediction beyond exchangeability,'' \emph{The Annals of Statistics},
+  vol.~51, no.~2, pp. 816--845, 2023.
 
 \bibitem{colon2021vietnam}
 F.~J. Col{\'o}n-Gonz{\'a}lez \emph{et~al.}, ``Probabilistic seasonal dengue
@@ -121,23 +107,38 @@ J.~Bracher, E.~L. Ray, T.~Gneiting, and N.~G. Reich, ``Evaluating epidemic
   forecasts in an interval format,'' \emph{PLoS Computational Biology},
   vol.~17, no.~2, p. e1008618, 2021.
 
-\bibitem{clarke2024opendengue}
-J.~Clarke \emph{et~al.}, ``A global dataset of publicly available dengue case
-  count data,'' \emph{Scientific Data}, vol.~11, p. 296, 2024.
+\bibitem{gibbs2021}
+I.~Gibbs and E.~Cand{\`e}s, ``Adaptive conformal inference under distribution
+  shift,'' in \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2021.
 
-\bibitem{ke2017lightgbm}
-G.~Ke, Q.~Meng, T.~Finley, T.~Wang, W.~Chen, W.~Ma, Q.~Ye, and T.-Y. Liu,
-  ``{LightGBM}: a highly efficient gradient boosting decision tree,'' in
-  \emph{Advances in Neural Information Processing Systems (NeurIPS)}, vol.~30,
-  2017.
+\bibitem{zrnic2020}
+T.~Zrnic, D.~Jiang, A.~Ramdas, and M.~Jordan, ``The power of batching in
+  multiple hypothesis testing,'' in \emph{Proceedings of the International
+  Conference on Artificial Intelligence and Statistics (AISTATS)}, 2020.
 
-\bibitem{ansari2025chronos2}
-A.~F. Ansari \emph{et~al.}, ``Chronos-2: from univariate to universal
-  forecasting,'' \emph{arXiv preprint}, 2025.
+\bibitem{johansson2019}
+M.~A. Johansson \emph{et~al.}, ``An open challenge to advance probabilistic
+  forecasting for dengue epidemics,'' \emph{Proceedings of the National Academy
+  of Sciences}, vol. 116, no.~48, pp. 24\,268--24\,274, 2019.
 
-\bibitem{waudbysmith2024}
-I.~Waudby-Smith and A.~Ramdas, ``Estimating means of bounded random variables
-  by betting,'' \emph{Journal of the Royal Statistical Society: Series B},
-  vol.~86, no.~1, pp. 1--27, 2024.
+\bibitem{javanmard2018}
+A.~Javanmard and A.~Montanari, ``Online rules for control of false discovery
+  rate and false discovery exceedance,'' \emph{The Annals of Statistics},
+  vol.~46, no.~2, pp. 526--554, 2018.
+
+\bibitem{vovk2005}
+V.~Vovk, A.~Gammerman, and G.~Shafer, \emph{Algorithmic Learning in a Random
+  World}.\hskip 1em plus 0.5em minus 0.4em\relax New York: Springer, 2005.
+
+\bibitem{storey2003}
+J.~D. Storey, ``The positive false discovery rate: a {B}ayesian interpretation
+  and the q-value,'' \emph{The Annals of Statistics}, vol.~31, no.~6, pp.
+  2013--2035, 2003.
+
+\bibitem{benjamini2001}
+Y.~Benjamini and D.~Yekutieli, ``The control of the false discovery rate in
+  multiple testing under dependency,'' \emph{The Annals of Statistics},
+  vol.~29, no.~4, pp. 1165--1188, 2001.
 
 \end{thebibliography}

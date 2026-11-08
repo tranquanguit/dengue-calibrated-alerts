@@ -10,14 +10,19 @@
 \usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{multirow}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,fit}
 \usepackage[hidelinks]{hyperref}
 
 \newcommand{\FDRb}{\mathrm{FDR}_{\mathrm{b}}}
 \newcommand{\FDRp}{\mathrm{FDR}_{\mathrm{pool}}}
 
 \begin{document}
+
+% Order of the reference list: tier 1 = main sources the study builds on, tier 2 = related methods and background;
+% newest first within each tier. Remove this block to number references by first citation (the IEEE default).
+\nocite{ansari2025chronos2,clarke2024opendengue,jin2023selection,bates2023,hussain2018ewars,ke2017lightgbm,lowe2016,%
+sun2007,genovese2002,bortman1999,benjamini1995,%
+angelopoulos2021ltt,waudbysmith2024,angelopoulos2024crc,barber2023,colon2021vietnam,bracher2021,gibbs2021,zrnic2020,%
+johansson2019,javanmard2018,vovk2005,storey2003,benjamini2001}
 
 \title{Guaranteed versus Experienced False-Alert Rates: A Pre-registered Evaluation of Conformal Selection for Provincial Dengue Outbreak Bulletins}
 
@@ -40,10 +45,10 @@ conformal selection, false discovery rate, early warning system, dengue, outbrea
 \section{Introduction}
 
 \subsection{Motivation}
-Dengue is the fastest-spreading mosquito-borne viral disease, and South and South-East Asia carry most of its burden. Provincial health departments must decide one to three months in advance where to spray, where to stock intravenous fluids and where to open surge beds. Early-warning systems support these decisions with a bulletin that flags the provinces expected to exceed an endemic threshold \cite{bortman1999,hussain2018ewars,lowe2016}. Such a bulletin is useful only if it is trusted, and it is trusted only if it is rarely wrong: every false alarm costs vector-control resources and credibility.
+Dengue is the fastest-spreading mosquito-borne viral disease, and South and South-East Asia carry most of its burden. Provincial health departments must decide one to three months in advance where to spray, where to stock intravenous fluids and where to open surge beds. Early-warning systems support these decisions with a bulletin that flags the provinces expected to exceed an endemic threshold \cite{bortman1999,hussain2018ewars,lowe2016}. A bulletin is useful only if people trust it, and they trust it only if it is rarely wrong, because every false alarm costs vector-control resources and credibility.
 
 \subsection{Problem Statement and Research Gap}
-Conformal selection \cite{jin2023selection} offers a finite-sample promise of the kind an agency would like to announce: ``on average, at most 20\% of the flagged provinces will be false alarms''. The false discovery rate (FDR) in that sentence is $\mathbb{E}[V/\max(R,1)]$ over bulletins, where $V$ is the number of false alerts and $R$ the number of alerts in one bulletin; a bulletin without alerts contributes zero. A health officer instead experiences the share of false alerts among all alerts received over a season, $\sum V/\sum R$, which is the marginal FDR \cite{genovese2002,sun2007}. The two notions are classical, and the theory predicts that they can differ. What is missing is three things: (i) a measurement of how large the difference is on real multi-country surveillance data; (ii) a test of whether it changes which alerting rule an agency should prefer; and (iii) an explanation of where it comes from. Existing dengue warning systems report sensitivity and positive predictive value at fixed thresholds and make no announced error-rate promise \cite{lowe2016,hussain2018ewars}, while the conformal literature evaluates its guarantee on the quantity it controls.
+Conformal selection \cite{jin2023selection} offers a finite-sample promise of the kind an agency would like to announce: ``on average, at most 20\% of the flagged provinces will be false alarms''. The false discovery rate (FDR) in that sentence is $\mathbb{E}[V/\max(R,1)]$ over bulletins, where $V$ is the number of false alerts and $R$ the number of alerts in one bulletin; a bulletin without alerts contributes zero. A health officer instead experiences the share of false alerts among all alerts received over a season, $\sum V/\sum R$, which is the marginal FDR \cite{genovese2002,sun2007}. The two notions are classical, and the theory predicts that they can differ. Three things are still missing: (i) a measurement of how large the difference is on real multi-country surveillance data; (ii) a test of whether it changes which alerting rule an agency should prefer; and (iii) an explanation of where it comes from. Existing dengue warning systems report sensitivity and positive predictive value at fixed thresholds and make no announced error-rate promise \cite{lowe2016,hussain2018ewars}, while the conformal literature evaluates its guarantee on the quantity it controls.
 
 \subsection{Research Questions and Hypotheses}
 This study answers three research questions (RQ) and tests five pre-registered hypotheses (H), all at $q=0.2$:
@@ -69,36 +74,20 @@ The contributions of this work are:
 The BH procedure \cite{benjamini1995} controls $\mathbb{E}[V/\max(R,1)]$ under independence and positive dependence \cite{benjamini2001}. When $R$ is random, this differs from the positive FDR $\mathbb{E}[V/R\mid R>0]$ \cite{storey2003} and from the marginal FDR $\mathbb{E}[V]/\mathbb{E}[R]$ \cite{genovese2002}; for the marginal FDR the optimal rule is a single global threshold on a local-fdr statistic \cite{sun2007}. Conformal p-values \cite{vovk2005,bates2023} compare a new score with the scores of past cases and need no distributional assumption. Combined with BH they select units whose outcome exceeds a threshold with finite-sample FDR control \cite{jin2023selection}. Extensions address non-exchangeable data \cite{barber2023,gibbs2021}, general risks \cite{angelopoulos2024crc,angelopoulos2021ltt} and sequences of selections \cite{javanmard2018,zrnic2020}.
 
 \subsection{Prior Work and Limitations}
-Dengue forecasting studies evaluate point or probabilistic accuracy \cite{johansson2019,colon2021vietnam,bracher2021}. Early-warning systems such as EWARS \cite{hussain2018ewars} and the Brazilian prototype \cite{lowe2016} turn forecasts into alerts with an endemic-channel threshold \cite{bortman1999}, but report detection skill without an announced false-alert promise. Conformal selection supplies such a promise, yet its evaluations report the guaranteed quantity. To our knowledge, no study has measured the guaranteed and the experienced FDR side by side on real outbreak bulletins, or asked whether the choice between them changes the recommended rule. Our angle is therefore an operational evaluation: the theory is classical, and the contribution is its measured size and consequence.
+Dengue forecasting studies evaluate point or probabilistic accuracy \cite{johansson2019,colon2021vietnam,bracher2021}. Early-warning systems such as EWARS \cite{hussain2018ewars} and the Brazilian prototype \cite{lowe2016} turn forecasts into alerts with an endemic-channel threshold \cite{bortman1999}, but report detection skill without an announced false-alert promise. Conformal selection supplies such a promise, yet its evaluations report the guaranteed quantity. To our knowledge, no study has measured the guaranteed and the experienced FDR side by side on real outbreak bulletins, or asked whether the choice between them changes the recommended rule. The theory behind the two notions is classical; this study measures how large the difference is in practice and what it changes.
 
 % =====================================================================
 \section{Methodology}
 
 \subsection{Overview}
-The pipeline has four stages (Fig.~\ref{fig:pipeline}). Monthly provincial counts are cleaned and joined with climate data. A forecasting stage, taken from a companion study, produces seven quantiles 1--3 months ahead. An alerting stage turns the forecasts into a monthly bulletin with one of several rules. An evaluation stage scores each rule on both FDR notions.
+The pipeline has four stages (Fig.~\ref{fig:pipeline}): monthly provincial counts, probabilistic forecasts taken from a companion study (seven quantiles, 1--3 months ahead), alerting rules that turn the forecasts into a monthly bulletin, and an evaluation of every rule on both FDR notions.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\begin{tikzpicture}[font=\scriptsize, node distance=3.2mm and 3mm,
-  box/.style={draw, rounded corners=2pt, align=center, minimum height=8.5mm, text width=19mm, fill=gray!8},
-  hl/.style={box, fill=blue!8, draw=blue!60!black},
-  arr/.style={-{Stealth[length=1.6mm]}, semithick}]
-\node[box] (data) {Monthly cases,\\337 provinces,\\9 countries};
-\node[box, right=of data] (fc) {Probabilistic\\forecasts $h{=}1..3$\\(7 quantiles)};
-\node[box, right=of fc] (score) {Endemic channel\\+ risk score $s$};
-\node[hl, below=of score] (cs) {Conformal p-values\\+ BH at level $q$};
-\node[box, left=of cs] (pt) {Fixed-threshold\\rule $s>c$};
-\node[box, left=of pt] (bul) {Bulletin per\\country, month, $h$};
-\node[hl, below=of pt, text width=60mm] (eval) {Evaluation: bulletin FDR (guaranteed) vs pooled FDR (experienced), recall, onsets};
-\draw[arr] (data) -- (fc); \draw[arr] (fc) -- (score);
-\draw[arr] (score) -- (cs); \draw[arr] (score.south west) -- (pt.north east);
-\draw[arr] (cs) -- (pt);
-\draw[arr] (pt) -- (bul);
-\draw[arr] (bul.south) |- (eval.west);
-\end{tikzpicture}
+\includegraphics[width=\textwidth]{figures/fig_pipeline.pdf}
 \caption{Pipeline of the study. Each alerting rule (conformal selection, the fixed-threshold family, and the CRC and top-$k$ baselines) issues one bulletin per country, origin month and horizon; every bulletin is scored on both FDR notions.}
 \label{fig:pipeline}
-\end{figure}
+\end{figure*}
 
 \subsection{Data and Data Pipeline}
 Monthly dengue counts at the first sub-national level (province or state) come from OpenDengue V1.3 \cite{clarke2024opendengue} and national portals. The Viet Nam series (60 provinces, 1998--2010) was compiled by the authors from public sources; provinces that were split or merged were re-aggregated so that each forms one continuous series. Missing months are left missing (2.9\% of province-months in South-East Asia 2006--2010, 0.3\% in 2015--2024). Countries are split before any analysis into a development set, used to design the procedures, and a confirmation set, run once after the hypotheses were frozen (Table~\ref{tab:data}). The data are aggregated public counts with no identifiable information.
@@ -158,12 +147,12 @@ together with recall of event months, onset recall and lead time. The gap $\Delt
 \begin{equation}
 \Delta=\underbrace{(\mathrm{FDR}_{>0}-\FDRb)}_{\text{empty bulletins}}+\underbrace{\frac{\mathrm{Cov}(R,\mathrm{FDP}\mid R>0)}{\mathbb{E}[R\mid R>0]}}_{\text{alert weighting}},
 \end{equation}
-where the second term is positive when large bulletins are more often wrong. Confidence intervals (95\%) come from a country-year block bootstrap (1{,}000 resamples), and comparisons between rules use paired resamples. A country-stratified bootstrap and leave-one-country-out estimates are added as robustness checks.
+where the second term is positive when large bulletins are more often wrong. Confidence intervals (95\%) come from a country-year block bootstrap (1{,}000 resamples), and comparisons between rules use paired resamples. A country-stratified bootstrap and leave-one-country-out estimates serve as robustness checks.
 
 % =====================================================================
 \section{Experimental Setup}
 
-The hypotheses H1--H5 and an outcome-to-claim table were frozen in three versions on public GitHub branches before the confirmation set was analysed. Every change made afterwards is disclosed as a deviation; the main one is that origins without enough calibration cells (32--40 of 317 bulletins per horizon) were scored as empty for CS, whereas the plan excluded them. We therefore report results both with and without these burn-in origins. The confirmation set yields 317 bulletins per horizon. A simulation (40 provinces, 14 years, 300 replicates) adds a forecast error $w$ shared by all cells of a bulletin. Its share of the error variance is set to the value measured on the confirmation forecasts: the between-bulletin share of log forecast-error variance is 0.23--0.28 on average (0.05--0.08 for Viet Nam and 0.42--0.54 for Sri Lanka). All procedures are implemented in Python; the analysis code is unit-tested.
+The hypotheses H1--H5 and an outcome-to-claim table were frozen in three versions on public GitHub branches before the confirmation set was analysed. The main disclosed deviation is that origins without enough calibration cells (32--40 of 317 bulletins per horizon) were scored as empty for CS, whereas the plan excluded them. We therefore report results both with and without these burn-in origins. The confirmation set yields 317 bulletins per horizon. A simulation (40 provinces, 14 years, 300 replicates) adds a forecast error $w$ shared by all cells of a bulletin. Its share of the error variance is set to the value measured on the confirmation forecasts: the between-bulletin share of log forecast-error variance is 0.23--0.28 on average (0.05--0.08 for Viet Nam and 0.42--0.54 for Sri Lanka).
 
 % =====================================================================
 \section{Results}
@@ -208,7 +197,7 @@ Fig.~\ref{fig:frontier} traces each rule family across its tuning range. On the 
 \end{figure*}
 
 \subsection{Where the Gap Comes From}
-Regrouping the same conformal p-values into random pseudo-bulletins of the same sizes (within country, horizon and year) breaks the month-level grouping while keeping everything else. The gap then falls to 0.037, 0.084 and 0.102, and the alert-weighting term vanishes (Table~\ref{tab:main}). Compared with the burn-in-excluded gap (0.086, 0.137, 0.195), about 57\%, 39\% and 48\% of the gap is due to how alerts group into real months; the remainder is the classical difference that exists even under exchangeability. The simulation (Fig.~\ref{fig:sim}) shows the mechanism. Under i.i.d.\ errors CS is exact on its own quantity (0.204) yet already has a pooled FDR of 0.306. With the empirical shared-error share of 0.25, the gap of CS reaches 0.245, against 0.062 for the threshold rule, and it grows about 2.2 times faster with the shared error. The simulation illustrates the gap only; its threshold rule operates at a different point and says nothing about the ranking.
+Regrouping the same conformal p-values into random pseudo-bulletins of the same sizes (within country, horizon and year) breaks the month-level grouping while keeping everything else. The gap then falls to 0.037, 0.084 and 0.102, and the alert-weighting term vanishes (Table~\ref{tab:main}). Compared with the burn-in-excluded gap (0.086, 0.137, 0.195), about 57\%, 39\% and 48\% of the gap is due to how alerts group into real months; the remainder is the classical difference that exists even under exchangeability. The simulation (Fig.~\ref{fig:sim}) shows the mechanism. Under i.i.d.\ errors CS is exact on its own quantity (0.204) yet already has a pooled FDR of 0.306. With the empirical shared-error share of 0.25, the gap of CS reaches 0.245, against 0.062 for the threshold rule, and it grows about 2.2 times faster with the shared error. The simulation illustrates the gap only, not the ranking of rules.
 
 \begin{figure}[t]
 \centering
@@ -231,8 +220,12 @@ Mondrian calibration does not narrow the gap: its paired difference in pooled FD
 
 % =====================================================================
 \section{Conclusion and Future Work}
-This study measured, on four held-out countries and under a pre-registered plan, the difference between the false-alert rate that conformal selection guarantees and the one that users of an outbreak bulletin experience. The guarantee held, but the experienced false-alert share was 0.09--0.17 further from it than under a fixed-threshold rule, and the threshold rule was preferable on the experienced scale. About half of the gap comes from forecast errors shared by the provinces of the same month. Alert systems should therefore state which false-alert rate they control, and should be evaluated on that rate's frontier. Future work includes online FDR procedures that target the sequence of bulletins, betting-based certification, external validation on Latin American and East Asian surveillance data, and a monthly-updated warning dashboard for health agencies.
+This study measured, on four held-out countries and under a pre-registered plan, the difference between the false-alert rate that conformal selection guarantees and the one that users of an outbreak bulletin experience. The guarantee held, but the experienced false-alert share was 0.09--0.17 further from it than under a fixed-threshold rule, and the threshold rule was preferable on the experienced scale. About half of the gap comes from forecast errors shared by the provinces of the same month. Alert systems should therefore state which false-alert rate they control, and should be evaluated on that rate's frontier. Future work includes online FDR procedures over the sequence of bulletins, external validation on other regions, and a monthly-updated warning dashboard for health agencies.
 
+
+% IEEE policy: the use of AI-generated content must be disclosed in the acknowledgments. Text to be written by the authors.
+\section*{Acknowledgment}
+[Authors: AI-use disclosure; funding at camera-ready.]
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
