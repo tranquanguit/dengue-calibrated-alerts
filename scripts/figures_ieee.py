@@ -28,7 +28,7 @@ r = r[r.procedure != "point-z>0.0"]
 fam = {"point-margin": ("#4C78A8", "o", "Fixed threshold (margin $>c$)"), "point-z": ("#72B7B2", "s", "Fixed threshold (z-margin $>c$)"),
        "cs": ("#E45756", "^", "Conformal selection"), "cs-mondrian": ("#F58518", "v", "Mondrian CS"),
        "crc": ("#54A24B", "D", "CRC scan")}
-fig, ax = plt.subplots(2, 3, figsize=(4.8, 3.2) if LLNCS else (7.16, 3.45))
+fig, ax = plt.subplots(2, 3, figsize=(4.8, 2.95) if LLNCS else (7.16, 3.45))
 for j, h in enumerate((1, 2, 3)):
     g = r[r.h == h]
     for i, xc in enumerate(("fdr_pooled", "fdr_bulletin")):
@@ -52,7 +52,7 @@ ax[0, 0].set_ylabel("Recall")
 ax[1, 0].set_ylabel("Recall")
 hs, ls = ax[0, 0].get_legend_handles_labels()
 fig.legend(hs, ls, loc="upper center", ncol=3 if LLNCS else 5, frameon=False, handlelength=1.8, bbox_to_anchor=(0.5, 1.0))
-fig.tight_layout(pad=0.4, h_pad=0.6, w_pad=0.6, rect=(0, 0, 1, 0.88 if LLNCS else 0.94))
+fig.tight_layout(pad=0.4, h_pad=0.6, w_pad=0.6, rect=(0, 0, 1, 0.87 if LLNCS else 0.94))
 fig.savefig(OUT / "frontier.pdf")
 
 s = pd.read_csv(R / "simulation/simulation.csv")

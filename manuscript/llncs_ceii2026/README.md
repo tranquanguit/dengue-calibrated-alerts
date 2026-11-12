@@ -17,4 +17,4 @@ figures/            vector figures; src/ holds the Mermaid source of Fig. 1
 
 Build: `pdflatex main && bibtex main && pdflatex main && pdflatex main`.
 Figures 2–3 at LNCS width: `python scripts/figures_ieee.py --llncs` from the repository root.
-To complete: the grant code in the acknowledgment and the repository URL in the footnote of C1.
+To complete: the grant code in the acknowledgment ("waiting for code").
