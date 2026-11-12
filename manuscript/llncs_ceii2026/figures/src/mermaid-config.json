@@ -1,0 +1,14 @@
+{
+  "theme": "base",
+  "themeVariables": {
+    "fontFamily": "TeX Gyre Termes, Times New Roman, serif",
+    "fontSize": "17px",
+    "primaryColor": "#f3f4f6",
+    "primaryBorderColor": "#4b5563",
+    "primaryTextColor": "#111827",
+    "lineColor": "#374151",
+    "clusterBkg": "#ffffff",
+    "clusterBorder": "#9ca3af"
+  },
+  "flowchart": { "curve": "basis", "nodeSpacing": 28, "rankSpacing": 34, "padding": 8, "htmlLabels": true }
+}

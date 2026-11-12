@@ -1,0 +1,120 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{angelopoulos2021ltt}
+Angelopoulos, A.N., Bates, S., Cand{\`e}s, E.J., Jordan, M.I., Lei, L.: Learn
+  then test: Calibrating predictive algorithms to achieve risk control. The
+  Annals of Applied Statistics  \textbf{19}(2),  1641--1662 (2025)
+
+\bibitem{angelopoulos2024crc}
+Angelopoulos, A.N., Bates, S., Fisch, A., Lei, L., Schuster, T.: Conformal risk
+  control. In: Proceedings of the International Conference on Learning
+  Representations (ICLR) (2024)
+
+\bibitem{ansari2025chronos2}
+Ansari, A.F., et~al.: Chronos-2: from univariate to universal forecasting.
+  arXiv preprint  (2025)
+
+\bibitem{barber2023}
+Barber, R.F., Cand{\`e}s, E.J., Ramdas, A., Tibshirani, R.J.: Conformal
+  prediction beyond exchangeability. The Annals of Statistics  \textbf{51}(2),
+  816--845 (2023)
+
+\bibitem{bates2023}
+Bates, S., Cand{\`e}s, E., Lei, L., Romano, Y., Sesia, M.: Testing for outliers
+  with conformal p-values. The Annals of Statistics  \textbf{51}(1),  149--178
+  (2023)
+
+\bibitem{benjamini1995}
+Benjamini, Y., Hochberg, Y.: Controlling the false discovery rate: a practical
+  and powerful approach to multiple testing. Journal of the Royal Statistical
+  Society: Series B  \textbf{57}(1),  289--300 (1995)
+
+\bibitem{benjamini2001}
+Benjamini, Y., Yekutieli, D.: The control of the false discovery rate in
+  multiple testing under dependency. The Annals of Statistics  \textbf{29}(4),
+  1165--1188 (2001)
+
+\bibitem{bortman1999}
+Bortman, M.: Elaboraci{\'o}n de corredores o canales end{\'e}micos mediante
+  planillas de c{\'a}lculo. Revista Panamericana de Salud P{\'u}blica
+  \textbf{5}(1), ~1--8 (1999)
+
+\bibitem{bracher2021}
+Bracher, J., Ray, E.L., Gneiting, T., Reich, N.G.: Evaluating epidemic
+  forecasts in an interval format. PLoS Computational Biology  \textbf{17}(2),
+  e1008618 (2021)
+
+\bibitem{clarke2024opendengue}
+Clarke, J., et~al.: A global dataset of publicly available dengue case count
+  data. Scientific Data  \textbf{11}, ~296 (2024)
+
+\bibitem{colon2021vietnam}
+Col{\'o}n-Gonz{\'a}lez, F.J., et~al.: Probabilistic seasonal dengue forecasting
+  in {V}ietnam: a modelling study using superensembles. PLoS Medicine
+  \textbf{18}(3),  e1003542 (2021)
+
+\bibitem{genovese2002}
+Genovese, C., Wasserman, L.: Operating characteristics and extensions of the
+  false discovery rate procedure. Journal of the Royal Statistical Society:
+  Series B  \textbf{64}(3),  499--517 (2002)
+
+\bibitem{gibbs2021}
+Gibbs, I., Cand{\`e}s, E.: Adaptive conformal inference under distribution
+  shift. In: Advances in Neural Information Processing Systems (NeurIPS) (2021)
+
+\bibitem{hussain2018ewars}
+Hussain-Alkhateeb, L., et~al.: Early warning and response system ({EWARS}) for
+  dengue outbreaks: recent advancements towards widespread applications in
+  critical settings. PLoS ONE  \textbf{13}(5),  e0196811 (2018)
+
+\bibitem{javanmard2018}
+Javanmard, A., Montanari, A.: Online rules for control of false discovery rate
+  and false discovery exceedance. The Annals of Statistics  \textbf{46}(2),
+  526--554 (2018)
+
+\bibitem{jin2023selection}
+Jin, Y., Cand{\`e}s, E.J.: Selection by prediction with conformal p-values.
+  Journal of Machine Learning Research  \textbf{24}(244),  1--41 (2023)
+
+\bibitem{johansson2019}
+Johansson, M.A., et~al.: An open challenge to advance probabilistic forecasting
+  for dengue epidemics. Proceedings of the National Academy of Sciences
+  \textbf{116}(48),  24268--24274 (2019)
+
+\bibitem{ke2017lightgbm}
+Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., Ye, Q., Liu, T.Y.:
+  {LightGBM}: a highly efficient gradient boosting decision tree. In: Advances
+  in Neural Information Processing Systems (NeurIPS). vol.~30 (2017)
+
+\bibitem{lowe2016}
+Lowe, R., et~al.: Evaluating probabilistic dengue risk forecasts from a
+  prototype early warning system for {B}razil. eLife  \textbf{5},  e11285
+  (2016)
+
+\bibitem{storey2003}
+Storey, J.D.: The positive false discovery rate: a {B}ayesian interpretation
+  and the q-value. The Annals of Statistics  \textbf{31}(6),  2013--2035 (2003)
+
+\bibitem{sun2007}
+Sun, W., Cai, T.T.: Oracle and adaptive compound decision rules for false
+  discovery rate control. Journal of the American Statistical Association
+  \textbf{102}(479),  901--912 (2007)
+
+\bibitem{vovk2005}
+Vovk, V., Gammerman, A., Shafer, G.: Algorithmic Learning in a Random World.
+  Springer, New York (2005)
+
+\bibitem{waudbysmith2024}
+Waudby-Smith, I., Ramdas, A.: Estimating means of bounded random variables by
+  betting. Journal of the Royal Statistical Society: Series B  \textbf{86}(1),
+  1--27 (2024)
+
+\bibitem{zrnic2020}
+Zrnic, T., Jiang, D., Ramdas, A., Jordan, M.: The power of batching in multiple
+  hypothesis testing. In: Proceedings of the International Conference on
+  Artificial Intelligence and Statistics (AISTATS) (2020)
+
+\end{thebibliography}

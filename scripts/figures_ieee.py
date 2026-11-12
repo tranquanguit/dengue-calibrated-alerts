@@ -1,4 +1,9 @@
-"""Vector figures for the IEEE (ISCI 2027) version of Paper 2: frontier (full width) and simulation (one column)."""
+"""Vector figures for Paper 2: frontier (full width) and simulation.
+
+Default: IEEE two-column version (manuscript/ieee_isci2027/figures).
+--llncs: Springer LNCS/LNNS version for CEII 2026 (manuscript/llncs_ceii2026/figures, text width 122 mm).
+"""
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -8,7 +13,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
 R = Path(__file__).resolve().parents[1] / "results"
-OUT = Path(__file__).resolve().parents[1] / "manuscript/ieee_isci2027/figures"
+LLNCS = "--llncs" in sys.argv
+OUT = Path(__file__).resolve().parents[1] / ("manuscript/llncs_ceii2026/figures" if LLNCS else "manuscript/ieee_isci2027/figures")
 OUT.mkdir(parents=True, exist_ok=True)
 plt.rcParams.update({"font.family": "serif", "font.serif": ["Liberation Serif", "Times New Roman", "DejaVu Serif"], "mathtext.fontset": "stix", "font.size": 7.5, "axes.titlesize": 8, "axes.labelsize": 7.5,
                      "legend.fontsize": 6.5, "xtick.labelsize": 6.5, "ytick.labelsize": 6.5, "lines.linewidth": 1.0,
@@ -22,7 +28,7 @@ r = r[r.procedure != "point-z>0.0"]
 fam = {"point-margin": ("#4C78A8", "o", "Fixed threshold (margin $>c$)"), "point-z": ("#72B7B2", "s", "Fixed threshold (z-margin $>c$)"),
        "cs": ("#E45756", "^", "Conformal selection"), "cs-mondrian": ("#F58518", "v", "Mondrian CS"),
        "crc": ("#54A24B", "D", "CRC scan")}
-fig, ax = plt.subplots(2, 3, figsize=(7.16, 3.45))
+fig, ax = plt.subplots(2, 3, figsize=(4.8, 3.2) if LLNCS else (7.16, 3.45))
 for j, h in enumerate((1, 2, 3)):
     g = r[r.h == h]
     for i, xc in enumerate(("fdr_pooled", "fdr_bulletin")):
@@ -45,8 +51,8 @@ for j, h in enumerate((1, 2, 3)):
 ax[0, 0].set_ylabel("Recall")
 ax[1, 0].set_ylabel("Recall")
 hs, ls = ax[0, 0].get_legend_handles_labels()
-fig.legend(hs, ls, loc="upper center", ncol=5, frameon=False, handlelength=1.8, bbox_to_anchor=(0.5, 1.0))
-fig.tight_layout(pad=0.4, h_pad=0.6, w_pad=0.6, rect=(0, 0, 1, 0.94))
+fig.legend(hs, ls, loc="upper center", ncol=3 if LLNCS else 5, frameon=False, handlelength=1.8, bbox_to_anchor=(0.5, 1.0))
+fig.tight_layout(pad=0.4, h_pad=0.6, w_pad=0.6, rect=(0, 0, 1, 0.88 if LLNCS else 0.94))
 fig.savefig(OUT / "frontier.pdf")
 
 s = pd.read_csv(R / "simulation/simulation.csv")

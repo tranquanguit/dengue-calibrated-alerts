@@ -1,0 +1,16 @@
+flowchart LR
+  A["<b>Data</b><br/>monthly cases<br/>337 provinces, 9 countries<br/>5 development + 4<br/>confirmation countries"]
+  B["<b>Forecasts</b><br/>7 quantiles<br/>h = 1, 2, 3 months"]
+  C["<b>Event and score</b><br/>endemic channel τ<br/>standardised margin s"]
+  D["<b>Conformal selection</b><br/>conformal p-values<br/>+ BH at level q"]
+  E["<b>Fixed threshold</b><br/>alert if s &gt; c"]
+  F["<b>Bulletin</b><br/>one per country,<br/>origin month and h"]
+  G["<b>Evaluation</b><br/>bulletin FDR (guaranteed)<br/>pooled FDR (experienced)<br/>recall, onset recall"]
+  A --> B --> C
+  C --> D
+  C --> E
+  D --> F
+  E --> F
+  F --> G
+  style D fill:#e8eefb,stroke:#1f3b73
+  style G fill:#e8eefb,stroke:#1f3b73

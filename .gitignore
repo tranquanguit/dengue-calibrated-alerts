@@ -18,3 +18,7 @@ results/conformal_predictions.parquet
 manuscript/ieee_isci2027/*.aux
 manuscript/ieee_isci2027/*.out
 manuscript/ieee_isci2027/*.blg
+manuscript/llncs_ceii2026/*.aux
+manuscript/llncs_ceii2026/*.log
+manuscript/llncs_ceii2026/*.out
+manuscript/llncs_ceii2026/*.blg
