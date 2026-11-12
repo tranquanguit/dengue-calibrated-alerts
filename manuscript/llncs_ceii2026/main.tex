@@ -14,6 +14,19 @@
 \renewcommand\UrlFont{\color{blue}\rmfamily}
 \urlstyle{rm}
 
+% tighter heading spacing (same commands as llncs.cls, smaller skips and no stretch)
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}{-12\p@ \@plus -2\p@ \@minus -2\p@}{6\p@ \@plus 2\p@ \@minus 1\p@}{\normalfont\large\bfseries\boldmath\rightskip=\z@ \@plus 8em\pretolerance=10000 }}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-10\p@ \@plus -2\p@ \@minus -2\p@}{4\p@ \@plus 2\p@ \@minus 1\p@}{\normalfont\normalsize\bfseries\boldmath\rightskip=\z@ \@plus 8em\pretolerance=10000 }}
+\makeatother
+\raggedbottom
+
+% tighter space around floats and displayed equations
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\AtBeginDocument{\setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}\setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}}
+
 % float placement: let figures and tables share pages with text
 \renewcommand{\topfraction}{0.9}
 \renewcommand{\bottomfraction}{0.8}
