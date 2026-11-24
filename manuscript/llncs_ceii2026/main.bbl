@@ -17,11 +17,6 @@ Angelopoulos, A.N., Bates, S., Fisch, A., Lei, L., Schuster, T.: Conformal risk
 Ansari, A.F., et~al.: Chronos-2: from univariate to universal forecasting.
   arXiv preprint  (2025)
 
-\bibitem{barber2023}
-Barber, R.F., Cand{\`e}s, E.J., Ramdas, A., Tibshirani, R.J.: Conformal
-  prediction beyond exchangeability. The Annals of Statistics  \textbf{51}(2),
-  816--845 (2023)
-
 \bibitem{bates2023}
 Bates, S., Cand{\`e}s, E., Lei, L., Romano, Y., Sesia, M.: Testing for outliers
   with conformal p-values. The Annals of Statistics  \textbf{51}(1),  149--178
@@ -31,11 +26,6 @@ Bates, S., Cand{\`e}s, E., Lei, L., Romano, Y., Sesia, M.: Testing for outliers
 Benjamini, Y., Hochberg, Y.: Controlling the false discovery rate: a practical
   and powerful approach to multiple testing. Journal of the Royal Statistical
   Society: Series B  \textbf{57}(1),  289--300 (1995)
-
-\bibitem{benjamini2001}
-Benjamini, Y., Yekutieli, D.: The control of the false discovery rate in
-  multiple testing under dependency. The Annals of Statistics  \textbf{29}(4),
-  1165--1188 (2001)
 
 \bibitem{bortman1999}
 Bortman, M.: Elaboraci{\'o}n de corredores o canales end{\'e}micos mediante
@@ -94,23 +84,10 @@ Lowe, R., et~al.: Evaluating probabilistic dengue risk forecasts from a
   prototype early warning system for {B}razil. eLife  \textbf{5},  e11285
   (2016)
 
-\bibitem{storey2003}
-Storey, J.D.: The positive false discovery rate: a {B}ayesian interpretation
-  and the q-value. The Annals of Statistics  \textbf{31}(6),  2013--2035 (2003)
-
 \bibitem{sun2007}
 Sun, W., Cai, T.T.: Oracle and adaptive compound decision rules for false
   discovery rate control. Journal of the American Statistical Association
   \textbf{102}(479),  901--912 (2007)
-
-\bibitem{vovk2005}
-Vovk, V., Gammerman, A., Shafer, G.: Algorithmic Learning in a Random World.
-  Springer, New York (2005)
-
-\bibitem{waudbysmith2024}
-Waudby-Smith, I., Ramdas, A.: Estimating means of bounded random variables by
-  betting. Journal of the Royal Statistical Society: Series B  \textbf{86}(1),
-  1--27 (2024)
 
 \bibitem{zrnic2020}
 Zrnic, T., Jiang, D., Ramdas, A., Jordan, M.: The power of batching in multiple
